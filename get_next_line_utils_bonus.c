@@ -1,17 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: igurses <igurses@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/30 14:27:18 by igurses           #+#    #+#             */
-/*   Updated: 2024/12/02 13:47:59 by igurses          ###   ########.fr       */
+/*   Created: 2024/12/02 17:52:20 by igurses           #+#    #+#             */
+/*   Updated: 2024/12/02 17:54:13 by igurses          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
-#include <unistd.h>
+#include "get_next_line_bonus.h"
 
 size_t	ft_strlen(const char *str)
 {

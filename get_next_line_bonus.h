@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: igurses <igurses@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/30 14:54:08 by igurses           #+#    #+#             */
-/*   Updated: 2024/12/02 17:51:21 by igurses          ###   ########.fr       */
+/*   Created: 2024/12/02 17:52:32 by igurses           #+#    #+#             */
+/*   Updated: 2024/12/02 17:52:43 by igurses          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE
-# define GET_NEXT_LINE
+#ifndef GET_NEXT_LINE_BONUS
+# define GET_NEXT_LINE_BONUS
 
 #ifndef BUFFER_SIZE
 # define BUFFER_SIZE 4

@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: igurses <igurses@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/30 14:52:07 by igurses           #+#    #+#             */
-/*   Updated: 2024/12/02 17:54:27 by igurses          ###   ########.fr       */
+/*   Created: 2024/12/02 17:54:35 by igurses           #+#    #+#             */
+/*   Updated: 2024/12/02 17:56:52 by igurses          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char *ft_read_line(int fd, char *putline)
 {
@@ -91,14 +91,14 @@ char *ft_put_remain(char *putline)
 char	*get_next_line(int fd)
 {
 	char		*mainline;
-	static char	*putline;
+	static char	*putline[1024];
 
-	if (fd < 0 || BUFFER_SIZE <= 0)
+	if (fd < 0 || BUFFER_SIZE <= 0 || fd > 1024)
 		return (0);
-	putline = ft_read_line(fd, putline);
-	if (!putline)
+	putline[fd] = ft_read_line(fd, putline[fd]);
+	if (!putline[fd])
 		return (NULL);
-	mainline = ft_put_line_main(putline);
-	putline = ft_put_remain(putline);
+	mainline = ft_put_line_main(putline[fd]);   
+	putline[fd] = ft_put_remain(putline[fd]);
 	return (mainline);
 }
