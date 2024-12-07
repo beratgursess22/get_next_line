@@ -6,13 +6,13 @@
 /*   By: igurses <igurses@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 17:54:35 by igurses           #+#    #+#             */
-/*   Updated: 2024/12/02 17:56:52 by igurses          ###   ########.fr       */
+/*   Updated: 2024/12/07 16:27:29 by igurses          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line_bonus.h"
 
-char *ft_read_line(int fd, char *putline)
+char	*ft_read_line(int fd, char *putline)
 {
 	char	*buff;
 	int		read_bytes;
@@ -27,6 +27,7 @@ char *ft_read_line(int fd, char *putline)
 		if (read_bytes == -1)
 		{
 			free(buff);
+			free(putline);
 			return (NULL);
 		}
 		buff[read_bytes] = '\0';
@@ -35,7 +36,8 @@ char *ft_read_line(int fd, char *putline)
 	free(buff);
 	return (putline);
 }
-char *ft_put_line_main(char *putline)
+
+char	*ft_put_line_main(char *putline)
 {
 	int		i;
 	char	*str;
@@ -62,7 +64,8 @@ char *ft_put_line_main(char *putline)
 	str[i] = '\0';
 	return (str);
 }
-char *ft_put_remain(char *putline)
+
+char	*ft_put_remain(char *putline)
 {
 	int		i;
 	int		j;
@@ -98,7 +101,7 @@ char	*get_next_line(int fd)
 	putline[fd] = ft_read_line(fd, putline[fd]);
 	if (!putline[fd])
 		return (NULL);
-	mainline = ft_put_line_main(putline[fd]);   
+	mainline = ft_put_line_main(putline[fd]);
 	putline[fd] = ft_put_remain(putline[fd]);
 	return (mainline);
 }

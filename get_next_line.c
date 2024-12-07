@@ -6,13 +6,13 @@
 /*   By: igurses <igurses@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 14:52:07 by igurses           #+#    #+#             */
-/*   Updated: 2024/12/02 17:54:27 by igurses          ###   ########.fr       */
+/*   Updated: 2024/12/07 16:31:42 by igurses          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char *ft_read_line(int fd, char *putline)
+char	*ft_read_line(int fd, char *putline)
 {
 	char	*buff;
 	int		read_bytes;
@@ -27,6 +27,7 @@ char *ft_read_line(int fd, char *putline)
 		if (read_bytes == -1)
 		{
 			free(buff);
+			free(putline);
 			return (NULL);
 		}
 		buff[read_bytes] = '\0';
@@ -35,7 +36,8 @@ char *ft_read_line(int fd, char *putline)
 	free(buff);
 	return (putline);
 }
-char *ft_put_line_main(char *putline)
+
+char	*ft_put_line_main(char *putline)
 {
 	int		i;
 	char	*str;
@@ -62,7 +64,8 @@ char *ft_put_line_main(char *putline)
 	str[i] = '\0';
 	return (str);
 }
-char *ft_put_remain(char *putline)
+
+char	*ft_put_remain(char *putline)
 {
 	int		i;
 	int		j;

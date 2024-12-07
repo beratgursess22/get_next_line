@@ -6,7 +6,7 @@
 /*   By: igurses <igurses@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 17:52:20 by igurses           #+#    #+#             */
-/*   Updated: 2024/12/02 17:54:13 by igurses          ###   ########.fr       */
+/*   Updated: 2024/12/07 16:31:01 by igurses          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ size_t	ft_strlen(const char *str)
 		i++;
 	return (i);
 }
-char *ft_strchr(const char *str, int c)
+
+char	*ft_strchr(const char *str, int c)
 {
 	int	i;
 

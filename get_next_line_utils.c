@@ -6,12 +6,11 @@
 /*   By: igurses <igurses@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 14:27:18 by igurses           #+#    #+#             */
-/*   Updated: 2024/12/02 13:47:59 by igurses          ###   ########.fr       */
+/*   Updated: 2024/12/07 16:32:27 by igurses          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-#include <unistd.h>
 
 size_t	ft_strlen(const char *str)
 {
@@ -24,7 +23,8 @@ size_t	ft_strlen(const char *str)
 		i++;
 	return (i);
 }
-char *ft_strchr(const char *str, int c)
+
+char	*ft_strchr(const char *str, int c)
 {
 	int	i;
 
